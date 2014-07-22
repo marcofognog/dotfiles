@@ -1,0 +1,20 @@
+[color]
+	ui = auto
+[user]
+	email = marcofognog@gmail.com
+	name = Marcao
+
+[color "status"]
+	changed = yellow
+	added = green
+	untracked = red
+
+[alias]
+  l = log --pretty=format:'%C(green)%h%C(reset) %an %C(yellow)%ar%C(reset) %C(magenta)%d %C(reset)%s'
+  s = status
+  d = diff
+  c = checkout
+  dc = diff --cached
+  lg  = "log --graph --pretty=format:'%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+[core]
+	editor = vim
