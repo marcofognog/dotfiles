@@ -47,7 +47,7 @@ set undodir=~/.vim/undo_files//
 
 set nu rnu
 
-" Show invisible chars
+"Show invisible chars
 set list
 set listchars=tab:»\ ,trail:·
 
