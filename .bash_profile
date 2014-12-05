@@ -7,13 +7,12 @@ EDITOR=/usr/bin/vim
 fe() {
   local file
   file=$(fzf --query="$1" --select-1 --exit-0)
-  [ -n "$file" ] && i3-msg "workspace 4; layout tabbed; exec \"gnome-terminal -e 'vim `pwd`/$file'\""
+  [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
 
 fd() {
   local dir
-  dir=$(find ${1:-*} -path '*/\.*' -prune \
-    -o -type d -print 2> /dev/null | fzf +m) &&
+  dir=$(ls -d ~/*/ | fzf +m) &&
     cd "$dir"
   ls
 }
