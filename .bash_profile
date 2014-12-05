@@ -7,7 +7,7 @@ EDITOR=/usr/bin/vim
 fe() {
   local file
   file=$(fzf --query="$1" --select-1 --exit-0)
-  [ -n "$file" ] && i3-msg "workspace 4; exec \"gnome-terminal -e 'vim $file'\""
+  [ -n "$file" ] && i3-msg "workspace 4; exec \"gnome-terminal -e 'vim `pwd`/$file'\""
 }
 
 fd() {
