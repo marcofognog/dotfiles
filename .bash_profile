@@ -10,15 +10,15 @@ set_term_title(){
 
 fe() {
   local file
-  file=$(fzf --query="$1" --select-1 --exit-0)
-  set_term_title "$file"
+  file=$(find . | fzf --query="$1" --select-1 --exit-0)
+  set_term_title `basename "$file"`
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
 
 fd() {
   local dir
   dir=$(ls -d ~/*/ | fzf +m) &&
-    cd "$dir"
+  cd "$dir"
   ls
 }
 
