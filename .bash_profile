@@ -37,5 +37,10 @@ fco() {
     git checkout $(echo "$commit" | sed "s/ .*//")
 }
 
+app(){
+  current=$(cat /tmp/current_project.tmp)
+  cd ~/$current
+}
+
 export TERM='screen-256color'
 alias lock='i3lock --color=000000'
