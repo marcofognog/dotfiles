@@ -10,7 +10,7 @@ set_term_title(){
 
 fe() {
   local file
-  file=$(find . | fzf --query="$1" --select-1 --exit-0)
+  file=$(find . -name .git -prune -o -print | fzf --query="$1" --select-1 --exit-0)
   set_term_title `basename "$file"`
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
