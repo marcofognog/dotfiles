@@ -4,9 +4,14 @@
 
 EDITOR=/usr/bin/vim
 
+set_term_title(){
+   echo -en "\033]0;$1\a"
+}
+
 fe() {
   local file
   file=$(fzf --query="$1" --select-1 --exit-0)
+  set_term_title "$file"
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
 
