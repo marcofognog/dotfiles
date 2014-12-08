@@ -10,14 +10,18 @@ set_term_title(){
 
 fe() {
   local file
-  file=$(find . -name .git -prune -o -print | fzf --query="$1" --select-1 --exit-0)
+  local current
+  current=$(cat /tmp/current_project.tmp)
+  file=$(find ~ -name .git -prune -o -name .rvm -prune -o -name .rbenv\
+   -prune -o -type d -o -print | fzf --query="$current" --select-1 --exit-0)
   set_term_title `basename "$file"`
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
 
 fd() {
   local dir
-  dir=$(ls -d ~/*/ | fzf +m) &&
+  dir=$(ls -d ~/*/ | fzf +m)
+  echo $(basename $dir) > /tmp/current_project.tmp
   cd "$dir"
   ls
 }
