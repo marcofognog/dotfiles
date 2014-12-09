@@ -75,3 +75,4 @@ URxvt.intensityStyles: false
 *color15:                 S_base3
 
 URxvt.font: xft:DejaVu Sans Mono:size=11
+URxvt.scrollBar: false
