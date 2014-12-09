@@ -76,3 +76,9 @@ URxvt.intensityStyles: false
 
 URxvt.font: xft:DejaVu Sans Mono:size=11
 URxvt.scrollBar: false
+URxvt.loginShell: true
+
+! Configure the copy/paste feature
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
