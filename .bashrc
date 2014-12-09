@@ -23,6 +23,8 @@ function setup_ps1 {
   PS1+=$clroff
 }
 
+alias ls="ls -h --color=auto"
+
 setup_ps1
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
