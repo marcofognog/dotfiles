@@ -1,1 +1,1 @@
-sudo apt-get install xdotool, i3, curl
+sudo apt-get install xdotool, i3, curl, xclip
