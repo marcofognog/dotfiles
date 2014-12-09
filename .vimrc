@@ -67,3 +67,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
+
+"Kee 10 lines above and below the cursosr
+set scrolloff=10
+
