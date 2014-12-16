@@ -14,6 +14,7 @@ set wildmenu
 set hlsearch
 set showcmd
 set ignorecase
+set clipboard=unnamed
 set smartcase
 set confirm
 set visualbell
@@ -22,7 +23,6 @@ set mouse=a
 set cmdheight=2
 colorscheme solarized
 set background=dark
-set clipboard=unnamedplus
 vnoremap p pgvy
 nnoremap Y y$
 " auto remove Trailing spaces
