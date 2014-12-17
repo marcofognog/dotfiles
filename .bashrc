@@ -9,7 +9,9 @@ set_term_title(){
 fe() {
   local file
   local current
-  current=$(cat /tmp/current_project.tmp)/
+  tempfile=/tmp/current_project.tmp
+  touch $tempfile
+  current=$(cat $tempfile)/
   file=$(find ~ -name .git -prune -o -name .rvm -prune -o -name .rbenv\
    -prune -o -type d -o -print | fzf --query="$current" --select-1 --exit-0)
   set_term_title `basename "$file"`
