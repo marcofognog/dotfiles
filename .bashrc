@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 EDITOR=/usr/bin/vim
-
+xrdb ~/.Xresources
 set_term_title(){
    echo -en "\033]0;$1\a"
 }
