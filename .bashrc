@@ -71,8 +71,8 @@ fe() {
   tempfile=/tmp/current_project.tmp
   touch $tempfile
   current=$(cat $tempfile)/
-  file=$(find ~ -name .git -prune -o -name .rvm -prune -o -name .rbenv\
-   -prune -o -type d -o -print | fzf --query="$current" --select-1 --exit-0)
+  file=$(find ~/"$current" -name .git -prune -o -name .rvm -prune -o -name .rbenv\
+   -prune -o -type d -o -print | fzf --select-1 --exit-0)
   set_term_title `basename "$file"`
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
