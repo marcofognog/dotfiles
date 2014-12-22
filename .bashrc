@@ -37,7 +37,7 @@ fco() {
     git checkout $(echo "$commit" | sed "s/ .*//")
 }
 
-app(){
+pjt(){
   current=$(cat /tmp/current_project.tmp)
   cd ~/$current
 }
