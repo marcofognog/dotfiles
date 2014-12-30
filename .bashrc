@@ -82,7 +82,7 @@ fd() {
   dir=$(ls -d ~/*/ | fzf +m)
   echo $(basename $dir) > /tmp/current_project.tmp
   cd "$dir"
-  ls
+  ls --color
 }
 
 fkill() {
