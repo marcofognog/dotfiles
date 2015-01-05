@@ -110,18 +110,13 @@ function setup_ps1 {
   local user="\u"
   local host="\h"
 
-  function ruby_version {
-    ruby -e "print RUBY_VERSION"
-  }
-
   local user_at_host="$user$txtred@$hiblu$host"
   local path="$path"
   local final="$"
 
   PS1=""
   PS1+=$user_at_host
-  PS1+=$path-
-  PS1+=ruby-$(ruby_version)
+  PS1+=$path
   PS1+=$newline
   PS1+=$final
   PS1+=$clroff
