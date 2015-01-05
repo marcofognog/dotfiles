@@ -1,3 +1,5 @@
+cp .bashrc ~/.bashrc
+
 # Vim config
 cp .vimrc ~/.vimrc
 cp -r .vim/* ~/.vim
