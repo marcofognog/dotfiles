@@ -77,12 +77,21 @@ fe() {
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
 
-fd() {
+fp() {
   local dir
   dir=$(ls -d ~/*/ | fzf +m)
   echo $(basename $dir) > /tmp/current_project.tmp
   cd "$dir"
-  ls --color
+  ls --color -a
+}
+
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+    -o -type d -print 2> /dev/null | fzf +m) &&
+    cd "$dir"
+  cd "$dir"
+  ls --color -a
 }
 
 fkill() {
