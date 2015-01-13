@@ -123,12 +123,12 @@ function setup_ps1 {
   local path="$path"
   local final="$"
 
-  PS1=""
+  PS1="\[\e[0;32m\]"
   PS1+=$user_at_host
   PS1+=$path
   PS1+=$newline
   PS1+=$final
-  PS1+=$clroff
+  PS1+="\[\e[0m\]"
 }
 
 alias ls="ls -h --color=auto"
