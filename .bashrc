@@ -106,8 +106,13 @@ fco() {
 }
 
 pjt(){
-  current=$(cat /tmp/current_project.tmp)
-  cd ~/$current
+  if [ "$1" != "" ] ; then
+    cd $1
+    echo $(basename $(pwd)) > /tmp/current_project.tmp
+  else
+    current=$(cat /tmp/current_project.tmp)
+    cd ~/$current
+  fi
 }
 
 export TERM='screen-256color'
