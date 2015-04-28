@@ -17,6 +17,8 @@ sudo apt-get update
 sudo apt-get -y install i3
 
 # I3 config
+echo "---------------------------- >creating i3 dir"
+mkdir ~/.i3
 cp -r .i3/* ~/.i3
 
 sudo apt-get -y install xdotool treE curl xclip rxvt-unicode
