@@ -1,4 +1,5 @@
 cp .bashrc ~/.bashrc
+cp .gitconfig ~/.gitconfig
 
 # Vim config
 cp .vimrc ~/.vimrc
