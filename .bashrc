@@ -136,6 +136,10 @@ function setup_ps1 {
   PS1+="\[\e[0m\]"
 }
 
+nib(){
+  ssh -i .ssh/sysint_custom _manogueira@nibbler0001.linux.locaweb.com.br
+}
+
 alias ls="ls -h --color=auto"
 
 setup_ps1
