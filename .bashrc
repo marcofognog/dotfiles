@@ -21,14 +21,14 @@ HISTFILESIZE=2000
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  alias ls='ls --color=auto'
+  #alias dir='dir --color=auto'
+  #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+  alias grep='grep --color=auto'
+  alias fgrep='fgrep --color=auto'
+  alias egrep='egrep --color=auto'
 fi
 
 # some more ls aliases
@@ -40,7 +40,7 @@ alias l='ls -CF'
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "/home/marco/.rvm/scripts/rvm" ]] && source "/home/marco/.rvm/scripts/rvm"  # This loads RVM into a shell session.
@@ -62,7 +62,7 @@ EDITOR=/usr/bin/vim
 xrdb ~/.Xresources
 
 set_term_title(){
-   echo -en "\033]0;$1\a"
+  echo -en "\033]0;$1\a"
 }
 
 fe() {
@@ -72,7 +72,7 @@ fe() {
   touch $tempfile
   current=$(cat $tempfile)/
   file=$(find ~/"$current" -name .git -prune -o -name .rvm -prune -o -name .rbenv\
-   -prune -o -type d -o -print | fzf --select-1 --exit-0)
+    -prune -o -type d -o -print | fzf --select-1 --exit-0)
   set_term_title `basename "$file"`
   [ -n "$file" ] && ${EDITOR:-vim} "$file"
 }
@@ -119,21 +119,21 @@ export TERM='screen-256color'
 alias lock='i3lock --color=000000'
 
 function setup_ps1 {
-  local path="\w"
-  local newline="\n"
-  local user="\u"
-  local host="\h"
+local path="\w"
+local newline="\n"
+local user="\u"
+local host="\h"
 
-  local user_at_host="$user$txtred@$hiblu$host"
-  local path="$path"
-  local final="$"
+local user_at_host="$user$txtred@$hiblu$host"
+local path="$path"
+local final="$"
 
-  PS1="\[\e[0;32m\]"
-  PS1+=$user_at_host
-  PS1+=$path
-  PS1+=$newline
-  PS1+=$final
-  PS1+="\[\e[0m\]"
+PS1="\[\e[0;32m\]"
+PS1+=$user_at_host
+PS1+=$path
+PS1+=$newline
+PS1+=$final
+PS1+="\[\e[0m\]"
 }
 
 nib(){
