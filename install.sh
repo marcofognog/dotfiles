@@ -24,6 +24,9 @@ cp -r .i3/* ~/.i3
 sudo apt-get -y install xdotool treE curl xclip rxvt-unicode
 sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
 
+# install vundle
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 # Finding files automated
 sudo cp file-edit.sh /usr/local/bin
 

@@ -20,7 +20,7 @@ set confirm
 set visualbell
 set t_vb=
 set mouse=a
-set cmdheight=2
+set cmdheight=4
 colorscheme solarized
 set background=dark
 vnoremap p pgvy
@@ -60,14 +60,13 @@ set nomodeline
 
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'gmarik/vundle'
+Plugin 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
 "Kee 10 lines above and below the cursor
 set scrolloff=20
-
