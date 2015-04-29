@@ -79,8 +79,9 @@ fe() {
 
 fp() {
   local dir
-  dir=$(ls -d ~/*/ | fzf +m)
-  echo $(basename $dir) > /tmp/current_project.tmp
+  namespace=projetos
+  dir=$(ls -d ~/$namespace/* | fzf +m)
+  echo $namespace/$(basename $dir) > /tmp/current_project.tmp
   cd "$dir"
   ls --color -a
 }
