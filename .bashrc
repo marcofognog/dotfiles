@@ -109,7 +109,7 @@ fco() {
 pjt(){
   if [ "$1" != "" ] ; then
     cd $1
-    echo $(basename $(pwd)) > /tmp/current_project.tmp
+    echo projetos/$(basename $(pwd)) > /tmp/current_project.tmp
   else
     current=$(cat /tmp/current_project.tmp)
     cd ~/$current
