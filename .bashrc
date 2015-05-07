@@ -43,7 +43,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
   . /etc/bash_completion
 fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "/home/marco/.rvm/scripts/rvm" ]] && source "/home/marco/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 # set the right keyboard layout, since Ubuntu keeps forgeting it
 setxkbmap br
