@@ -1,4 +1,5 @@
 cp .bashrc ~/.bashrc
+cp -r .bashrc.d ~/.bashrc.d
 cp .gitconfig ~/.gitconfig
 
 # Vim config
