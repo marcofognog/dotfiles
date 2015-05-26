@@ -2,10 +2,6 @@ cp .bashrc ~/.bashrc
 cp -r .bashrc.d ~/.bashrc.d
 cp .gitconfig ~/.gitconfig
 
-# Vim config
-cp .vimrc ~/.vimrc
-cp -r .vim/* ~/.vim
-
 # urxvt config
 cp .Xresources ~/
 xrdb .Xresources
@@ -22,7 +18,14 @@ echo "---------------------------- >creating i3 dir"
 mkdir ~/.i3
 cp -r .i3/* ~/.i3
 
-sudo apt-get -y install xdotool treE curl xclip rxvt-unicode
+# ---- VIM ----
+./build-vim
+
+# Vim config
+cp .vimrc ~/.vimrc
+cp -r .vim/* ~/.vim
+
+sudo apt-get -y install xdotool tree curl xclip rxvt-unicode
 sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
 
 # install vundle

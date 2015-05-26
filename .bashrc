@@ -55,7 +55,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 source ~/.fzf.bash
 
-EDITOR=/usr/bin/vim
+EDITOR=/usr/local/bin/vim
 
 # Load urxvt config
 xrdb ~/.Xresources
