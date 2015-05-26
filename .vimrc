@@ -23,7 +23,7 @@ set mouse=a
 set cmdheight=4
 colorscheme solarized
 set background=dark
-vnoremap p pgvy
+vnoremap <C-c> "+y
 nnoremap Y y$
 " auto remove Trailing spaces
 autocmd BufWritePre * :%s/\s\+$//e
