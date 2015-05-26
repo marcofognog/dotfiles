@@ -40,7 +40,7 @@ fco() {
 }
 
 p(){
-  if [ "$1" != "" ] ; then
+  if [ "$1" == "." ] ; then
     cd $1
     echo projetos/$(basename $(pwd)) > /tmp/current_project.tmp
   else
