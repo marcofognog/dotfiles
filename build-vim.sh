@@ -10,7 +10,7 @@ cd /tmp/
 hg clone https://code.google.com/p/vim/
 cd vim
 
---enable-perlinterp \
+./configure --enable-perlinterp \
     --enable-cscope \
     --enable-gui=auto \
     --enable-gtk2-check \
@@ -19,9 +19,7 @@ cd vim
     --enable-multibyte \
     --with-x \
 
-export VIMRUNTIMEDIR=/usr/share/vim/vim74
-make
+export VIMRUNTIME=/usr/local/share/vim/vim74/
 sudo checkinstall -D -y
-mkdir -p /usr/share/vim/vim74/syntax
-sudo ln -s /usr/local/share/vim/vim74/syntax/syntax.vim /usr/share/vim/vim74/syntax/syntax.vim
 
+sudo rm -rf /tmp/vim
