@@ -14,7 +14,7 @@ mkdir ~/.i3
 cp -r .i3/* ~/.i3
 
 # ---- VIM ----
-./build-vim
+./build-vim.sh
 
 # Vim config
 cp .vimrc ~/.vimrc
