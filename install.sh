@@ -2,10 +2,6 @@ cp .bashrc ~/.bashrc
 cp -r .bashrc.d ~/.bashrc.d
 cp .gitconfig ~/.gitconfig
 
-# urxvt config
-cp .Xresources ~/
-xrdb .Xresources
-
 #---- I3 ----
 echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
 sudo apt-get update
@@ -28,6 +24,8 @@ cp -r .vim/* ~/.vim
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 # ---- URXVT ----
+cp .Xresources ~/
+xrdb .Xresources
 
 sudo apt-get -y install xdotool tree curl xclip rxvt-unicode
 sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
@@ -38,5 +36,3 @@ sudo cp file-edit.sh /usr/local/bin
 # FZF finder
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
-
-source ~/.bashrc
