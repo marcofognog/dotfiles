@@ -46,6 +46,7 @@ fi
 
 # set the right keyboard layout, since Ubuntu keeps forgeting it
 setxkbmap br
+
 export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26/
 export PATH=$PATH:/opt/android-sdk-linux/platform-tools/
 
@@ -64,7 +65,7 @@ set_term_title(){
   echo -en "\033]0;$1\a"
 }
 
-source $HOME/.bashrc.d/functions
+source $HOME/.bashrc.d/functions.sh
 
 export TERM='screen-256color'
 alias lock='i3lock --color=000000'
