@@ -1,2 +1,6 @@
 vim ctags
 pj -
+seleção de texto em resultado no temrinal
+renomear janelas de acordo com conteudo
+magnet link apontar para transminssion
+fazer copy do vi funcionar mesmo quando o arquivo fechou
