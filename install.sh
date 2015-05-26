@@ -6,14 +6,13 @@ cp .gitconfig ~/.gitconfig
 cp .Xresources ~/
 xrdb .Xresources
 
-# Install recent I3wm
+#---- I3 ----
 echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get -y --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
 sudo apt-get -y install i3
 
-# I3 config
 echo "---------------------------- >creating i3 dir"
 mkdir ~/.i3
 cp -r .i3/* ~/.i3
@@ -25,11 +24,13 @@ cp -r .i3/* ~/.i3
 cp .vimrc ~/.vimrc
 cp -r .vim/* ~/.vim
 
-sudo apt-get -y install xdotool tree curl xclip rxvt-unicode
-sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
-
 # install vundle
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+# ---- URXVT ----
+
+sudo apt-get -y install xdotool tree curl xclip rxvt-unicode
+sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
 
 # Finding files automated
 sudo cp file-edit.sh /usr/local/bin
