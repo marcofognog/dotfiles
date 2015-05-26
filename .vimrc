@@ -69,4 +69,4 @@ Plugin 'vim-ruby/vim-ruby'
 filetype plugin indent on
 
 "Kee 10 lines above and below the cursor
-set scrolloff=20
+set scrolloff=10
