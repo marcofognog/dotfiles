@@ -42,7 +42,7 @@ fco() {
 p(){
   if [ "$1" == "." ] ; then
     cd $1
-    echo projetos/$(basename $(pwd)) > /tmp/current_project.tmp
+    echo $namespace/$(basename $(pwd)) > /tmp/current_project.tmp
   else
     current=$(cat /tmp/current_project.tmp)
     cd ~/$current
