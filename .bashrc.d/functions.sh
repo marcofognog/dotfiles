@@ -32,6 +32,15 @@ fkill() {
   ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
 }
 
+frep(){
+  local results line_number filename
+  results=$(grep -rn $1 $2) &&
+    result=$(echo "$results" | fzf +s +m -e) &&
+    filename=$(echo $result | cut -d ":" -f1)
+    line_number=$(echo $result | cut -d ":" -f2)
+    vim +$line_number $filename
+}
+
 fco() {
   local commits commit
   commits=$(git log --pretty=oneline --abbrev-commit --reverse) &&
