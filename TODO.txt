@@ -2,4 +2,5 @@ vim ctags
 pj -
 renomear janelas de acordo com conteudo
 magnet link apontar para transminssion
-fazer copy do vi funcionar mesmo quando o arquivo fechou
+fazer copy do vi funcionar mesmo quando o arquivo fechou -> probelma do i3
+mudar temas e cores do terminal facilmente
