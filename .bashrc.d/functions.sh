@@ -36,11 +36,12 @@ frep(){
   local results line_number filename
   results=$(grep -rn $1 $2)
   if [ ! -z "$results" ]; then
-    echo "entrou"
     result=$(echo "$results" | fzf +s +m -e)
-    filename=$(echo $result | cut -d ":" -f1)
-    line_number=$(echo $result | cut -d ":" -f2)
-    vim +$line_number $filename
+    if [ ! -z "$result" ]; then
+      filename=$(echo $result | cut -d ":" -f1)
+      line_number=$(echo $result | cut -d ":" -f2)
+      vim +$line_number $filename
+    fi
   fi
 }
 
