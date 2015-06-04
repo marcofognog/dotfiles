@@ -10,7 +10,7 @@
 	untracked = red
 
 [alias]
-  l = log --pretty=format:'%C(green)%h%C(reset) %an %C(yellow)%ar%C(reset) %C(magenta)%d %C(reset)%s'
+  l = log --pretty=format:'%C(green)%h%C(reset) %an %C(yellow)%ar%C(reset) %C(magenta)%d %C(reset)%s' -20
   s = status
   d = diff
   c = checkout
