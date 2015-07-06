@@ -21,10 +21,16 @@ cp -r .i3/ ~/.i3
 cp .vimrc ~/.vimrc
 cp -r .vim/* ~/.vim
 
-# install vundle
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+git clone https://github.com/gmarik/vundle.git /tmp/vundle
+
+if [ -d ~/.vim/bundle/vundle ]
+then
+  rm -rf ~/.vim/bundle/vundle
+fi
+mv /tmp/vundle ~/.vim/bundle/vundle
 
 # ---- URXVT ----
+
 cp .Xresources ~/
 xrdb .Xresources
 
@@ -35,5 +41,12 @@ sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
 sudo cp file-edit.sh /usr/local/bin
 
 # FZF finder
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git /tmp/.fzf
+
+if [ -d ~/.fzf ]
+then
+  rm -rf ~/.fzf
+fi
+mv /tmp/.fzf ~/.fzf
+
 ~/.fzf/install
