@@ -70,3 +70,6 @@ filetype plugin indent on
 
 "Kee 10 lines above and below the cursor
 set scrolloff=10
+
+au InsertEnter * set cursorline
+au InsertLeave * set nocursorline
