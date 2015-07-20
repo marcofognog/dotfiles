@@ -6,3 +6,6 @@ fazer copy do vi funcionar mesmo quando o arquivo fechou -> probelma do i3
 mudar temas e cores do terminal facilmente
 fazer script para copiar só dotfiles
 o melhor sistema de navegação em um texto: plano cartesiano.
+abrir arquivo de erro ou falha de tete
+rodar um teste especifico dentro da lista de falhas da suite
+
