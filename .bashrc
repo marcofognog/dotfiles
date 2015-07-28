@@ -99,4 +99,3 @@ setup_ps1
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 alias open='xdg-open'
-export GIT_PAGER=''
