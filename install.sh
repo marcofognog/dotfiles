@@ -1,12 +1,13 @@
 set -xe
 
+sudo add-apt-repository ppa:shutter/ppa
 
 #---- I3 ----
 sudo echo "deb http://debian.sur5r.net/i3/ $(lsb_release -c -s) universe" >> /etc/apt/sources.list
 sudo apt-get update
 sudo apt-get -y --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
-sudo apt-get -y install i3
+sudo apt-get -y install i3 shutter
 
 # ---- VIM ----
 ./build-vim.sh
@@ -42,3 +43,4 @@ mv /tmp/.fzf ~/.fzf
 ~/.fzf/install
 
 ./copy-dots.sh
+

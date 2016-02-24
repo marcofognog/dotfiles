@@ -12,6 +12,9 @@ floating_modifier $mod
 # start a terminal
 Bindsym $mod+Return exec urxvt
 
+# Screenshot tool
+bindsym $mod+Shift+S exec shutter -s
+
 exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
 
 # kill focused window
