@@ -53,6 +53,7 @@ fco() {
 }
 
 p(){
+  namespace=projetos
   if [ "$1" == "." ] ; then
     cd $1
     echo $namespace/$(basename $(pwd)) > /tmp/current_project.tmp
