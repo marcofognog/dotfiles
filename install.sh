@@ -10,16 +10,7 @@ sudo apt-get -y --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
 sudo apt-get -y install i3 shutter google-chrome-stable
 
-# ---- VIM ----
-./build-vim.sh
-
-rm -rf /tmp/vundle
-git clone https://github.com/gmarik/vundle.git /tmp/vundle
-
-rm -rf ~/.vim/bundle/vundle
-mkdir -p ~/.vim/bundle/vundle
-
-mv /tmp/vundle/ ~/.vim/bundle/
+./containerizable.sh
 
 # ---- URXVT ----
 
