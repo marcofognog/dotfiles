@@ -12,14 +12,6 @@ sudo apt-get -y install i3 shutter google-chrome-stable
 
 ./containerizable.sh
 
-# ---- URXVT ----
-
-cp .Xresources ~/
-xrdb .Xresources
-
-sudo apt-get -y install xdotool tree curl xclip rxvt-unicode
-sudo cp urxvtclip /usr/lib/urxvt/perl/clipboard
-
 # Finding files automated
 sudo cp file-edit.sh /usr/local/bin
 
