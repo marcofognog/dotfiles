@@ -6,7 +6,6 @@ fe() {
   current=$(cat $tempfile)/
   file=$(find ~/"$current" -name .git -prune -o -name .rvm -prune -o -name .rbenv\
     -prune -o -type d -o -print | fzf --select-1 --exit-0)
-  set_term_title `basename "$file"`
   [ -n "$file" ] && vim "$file"
 }
 
