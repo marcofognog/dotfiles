@@ -7,7 +7,7 @@ st() {
   echo $(curl -ksb -XPOST -d "service=$1" "$ticket")
 }
 
-target=$(cat .cas-ticket-targets | fzf --select-1 --exit-0)
+target=$(cat $HOME/.cas-ticket-targets | fzf --select-1 --exit-0)
 cas_service=$(echo $target | cut -d',' -f1)
 cas_user=$(echo $target | cut -d',' -f2)
 cas_pass=$(echo $target | cut -d',' -f3)
