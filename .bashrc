@@ -47,7 +47,7 @@ fi
 # set the right keyboard layout, since Ubuntu keeps forgeting it
 setxkbmap br
 
-export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.26/
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export PATH=$PATH:/opt/android-sdk-linux/platform-tools/
 
 ### Added by the Heroku Toolbelt
