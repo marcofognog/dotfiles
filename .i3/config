@@ -1,7 +1,7 @@
 # custom config file.
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -21,7 +21,7 @@ exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+p exec dmenu_run
 
 # change focus
 bindsym $mod+h focus left
@@ -51,13 +51,13 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+y split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+o split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen
+bindsym $mod+u fullscreen
 
 # change container layout (stacked, tabbed, default)
-bindsym $mod+s layout stacking
+bindsym $mod+q layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout default
 
@@ -67,30 +67,21 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindcode $mod+d focus child
-
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+a workspace 1
+bindsym $mod+s workspace 2
+bindsym $mod+d workspace 3
+bindsym $mod+f workspace 4
+bindsym $mod+g workspace 5
+bindsym $mod+r workspace 6
+bindsym $mod+z workspace 7
+bindsym $mod+x workspace 8
+bindsym $mod+c workspace 9
+bindsym $mod+v workspace 10
 
 # Switch workspace
-bindsym $mod+Ctrl+l workspace next
-bindsym $mod+Ctrl+h workspace prev
-bindsym $mod+Ctrl+Right workspace next
-bindsym $mod+Ctrl+Left workspace prev
-
+bindsym $mod+Ctrl+j workspace next
+bindsym $mod+Ctrl+k workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1; workspace 1
@@ -149,9 +140,6 @@ bindsym Return mode "default"
 bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
-bindsym $mod+o exec /usr/local/bin/file-edit.sh
 bindsym $mod+b exec i3lock --color=000000
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
