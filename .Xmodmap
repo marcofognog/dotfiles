@@ -1,8 +1,14 @@
 clear control
-clear mod1
 clear lock
-keycode 37 = Alt_L Meta_L
-keycode 64 = Control_L
+clear mod4
+!
+! Hard CapsLock
 keycode 66 = Control_L
+!
+! Hard Ctrl
+keycode 37 = Super_L
+!
+! Hard Windows
+keycode 133 = Caps_Lock
 add control = Control_L Control_R
-add mod1 = Alt_L Meta_L
+add mod4  = Super_L
