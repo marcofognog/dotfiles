@@ -5,6 +5,16 @@ exec_always ~/./startup-hook.sh
 
 set $mod Mod4
 
+bindsym --release Mod1+k exec --no-startup-id xdotool key --clearmodifiers Up
+bindsym --release Mod1+j exec --no-startup-id xdotool key --clearmodifiers Down
+bindsym --release Mod1+h exec --no-startup-id xdotool key --clearmodifiers Left
+bindsym --release Mod1+l exec --no-startup-id xdotool key --clearmodifiers Right
+
+bindsym --release Mod1+u exec --no-startup-id xdotool key --clearmodifiers Page_Up
+bindsym --release Mod1+i exec --no-startup-id xdotool key --clearmodifiers Page_Down
+bindsym --release Mod1+y exec --no-startup-id xdotool key --clearmodifiers Home
+bindsym --release Mod1+o exec --no-startup-id xdotool key --clearmodifiers End
+
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
@@ -23,11 +33,11 @@ exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+p exec dmenu_run
+bindsym $mod+o exec dmenu_run
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+l focus right
+bindsym $mod+n focus left
+bindsym $mod+m focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -51,7 +61,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+y split h
 
 # split in vertical orientation
-bindsym $mod+o split v
+bindsym $mod+i split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+u fullscreen
@@ -78,10 +88,6 @@ bindsym $mod+z workspace 7
 bindsym $mod+x workspace 8
 bindsym $mod+c workspace 9
 bindsym $mod+v workspace 10
-
-# Switch workspace
-bindsym $mod+k workspace next
-bindsym $mod+j workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1; workspace 1
