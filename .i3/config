@@ -30,7 +30,7 @@ bindsym $mod+Shift+S exec shutter -s
 exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
 
 # kill focused window
-bindsym $mod+Shift+Q kill
+bindsym $mod+Shift+P kill
 
 # start dmenu (a program launcher)
 bindsym $mod+o exec dmenu_run
