@@ -8,42 +8,42 @@ set $mod Mod4
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-# start a terminal
-Bindsym $mod+Return exec urxvt
-
-bindsym $mod+Shift+S exec shutter -s # screenshot tool
+bindsym $mod+Return exec urxvt # terminal
+bindsym $mod+space exec dmenu_run
 
 bindsym $mod+a workspace 1
 bindsym $mod+b exec i3lock --color=000000
-bindsym $mod+c workspace 9
 bindsym $mod+d workspace 3
 bindsym $mod+e layout default
 bindsym $mod+f workspace 4
 bindsym $mod+g workspace 5
 bindsym $mod+m focus right
 bindsym $mod+n focus left
-bindsym $mod+o exec dmenu_run
 bindsym $mod+q layout stacking
 bindsym $mod+r workspace 6
 bindsym $mod+s workspace 2
 bindsym $mod+u fullscreen
-bindsym $mod+v workspace 10
 bindsym $mod+w layout tabbed
 bindsym $mod+x workspace 8
 bindsym $mod+y split h
 bindsym $mod+z workspace 7
 
-bindsym $mod+Shift+P kill
+bindsym $mod+Up focus up
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
-bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+C reload
+bindsym $mod+Shift+E exit
+bindsym $mod+Shift+P kill
+bindsym $mod+Shift+R restart
+bindsym $mod+Shift+S exec shutter -s # screenshot tool
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+
 bindsym $mod+Shift+exclam move workspace 1; workspace 1
 bindsym $mod+Shift+at move workspace 2; workspace 2
 bindsym $mod+Shift+numbersign move workspace 3; workspace 3
@@ -54,9 +54,6 @@ bindsym $mod+Shift+ampersand move workspace 7;workspace 7
 bindsym $mod+Shift+asterisk move workspace 8; workspace 8
 bindsym $mod+Shift+parenleft move workspace 9; workspace 9
 bindsym $mod+Shift+parenright move workspace 10;workspace 10
-bindsym $mod+Shift+C reload
-bindsym $mod+Shift+R restart
-bindsym $mod+Shift+E exit
 
 focus_follows_mouse no
 workspace_layout tabbed
