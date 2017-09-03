@@ -5,29 +5,14 @@ exec_always ~/./startup-hook.sh
 
 set $mod Mod4
 
-bindsym --release Mod1+k exec --no-startup-id xdotool key --clearmodifiers Up
-bindsym --release Mod1+j exec --no-startup-id xdotool key --clearmodifiers Down
-bindsym --release Mod1+h exec --no-startup-id xdotool key --clearmodifiers Left
-bindsym --release Mod1+l exec --no-startup-id xdotool key --clearmodifiers Right
-
-bindsym --release Mod1+u exec --no-startup-id xdotool key --clearmodifiers Page_Up
-bindsym --release Mod1+i exec --no-startup-id xdotool key --clearmodifiers Page_Down
-bindsym --release Mod1+y exec --no-startup-id xdotool key --clearmodifiers Home
-bindsym --release Mod1+o exec --no-startup-id xdotool key --clearmodifiers End
-
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
 
 # start a terminal
 Bindsym $mod+Return exec urxvt
 
 # Screenshot tool
 bindsym $mod+Shift+S exec shutter -s
-
-exec /usr/bin/i3 -V -d all >~/i3log-$(date +'%F-%k-%M-%S') 2>&1
 
 # kill focused window
 bindsym $mod+Shift+P kill
@@ -44,12 +29,6 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-# move focused window
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move down
-bindsym $mod+Shift+L move up
-bindsym $mod+Shift+Ccedilla move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -107,44 +86,6 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # They resize the border in the direction you pressed, e.g.
-        # when pressing left, the window is resized so that it has
-        # more space on its left
-
-bindsym j resize shrink left 10 px or 10 ppt
-bindsym Shift+J resize grow   left 10 px or 10 ppt
-
-bindsym k resize shrink down 10 px or 10 ppt
-bindsym Shift+K resize grow   down 10 px or 10 ppt
-
-bindsym l resize shrink up 10 px or 10 ppt
-bindsym Shift+L resize grow   up 10 px or 10 ppt
-
-bindsym ccedilla resize shrink right 10 px or 10 ppt
-bindsym Shift+Ccedilla resize grow   right 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-bindsym Left resize shrink left 10 px or 10 ppt
-bindsym Shift+Left resize grow   left 10 px or 10 ppt
-
-bindsym Down resize shrink down 10 px or 10 ppt
-bindsym Shift+Down resize grow   down 10 px or 10 ppt
-
-bindsym Up resize shrink up 10 px or 10 ppt
-bindsym Shift+Up resize grow   up 10 px or 10 ppt
-
-bindsym Right resize shrink right 10 px or 10 ppt
-bindsym Shift+Right resize grow   right 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-bindsym Return mode "default"
-bindsym Escape mode "default"
-}
 
 bindsym $mod+b exec i3lock --color=000000
 # Start i3bar to display a workspace bar (plus the system information i3status
