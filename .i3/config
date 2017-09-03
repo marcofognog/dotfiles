@@ -11,22 +11,21 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 bindsym $mod+Return exec urxvt # terminal
 bindsym $mod+space exec dmenu_run
 
-bindsym $mod+a workspace 1
-bindsym $mod+b exec i3lock --color=000000
-bindsym $mod+d workspace 3
-bindsym $mod+e layout default
-bindsym $mod+f workspace 4
-bindsym $mod+g workspace 5
-bindsym $mod+m focus right
-bindsym $mod+n focus left
-bindsym $mod+q layout stacking
-bindsym $mod+r workspace 6
-bindsym $mod+s workspace 2
-bindsym $mod+u fullscreen
-bindsym $mod+w layout tabbed
-bindsym $mod+x workspace 8
-bindsym $mod+y split h
-bindsym $mod+z workspace 7
+bindsym $mod+j workspace 1
+bindsym $mod+k workspace 2
+bindsym $mod+l workspace 3
+bindsym $mod+n workspace 4
+bindsym $mod+m workspace 5
+bindsym $mod+comma workspace 6
+bindsym $mod+period workspace 7
+bindsym $mod+semicolon workspace 8
+
+bindsym $mod+u focus right
+bindsym $mod+i focus left
+bindsym $mod+o layout stacking
+bindsym $mod+p layout tabbed
+bindsym $mod+y fullscreen
+bindsym $mod+h exec i3lock --color=000000
 
 bindsym $mod+Up focus up
 bindsym $mod+Left focus left
@@ -52,8 +51,6 @@ bindsym $mod+Shift+percent move workspace 5; workspace 5
 bindsym $mod+Shift+dead_diaeresis move workspace 6; workspace 6
 bindsym $mod+Shift+ampersand move workspace 7;workspace 7
 bindsym $mod+Shift+asterisk move workspace 8; workspace 8
-bindsym $mod+Shift+parenleft move workspace 9; workspace 9
-bindsym $mod+Shift+parenright move workspace 10;workspace 10
 
 focus_follows_mouse no
 workspace_layout tabbed
