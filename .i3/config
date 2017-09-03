@@ -13,10 +13,27 @@ Bindsym $mod+Return exec urxvt
 
 bindsym $mod+Shift+S exec shutter -s # screenshot tool
 
-bindsym $mod+Shift+P kill
-bindsym $mod+o exec dmenu_run
-bindsym $mod+n focus left
+bindsym $mod+a workspace 1
+bindsym $mod+b exec i3lock --color=000000
+bindsym $mod+c workspace 9
+bindsym $mod+d workspace 3
+bindsym $mod+e layout default
+bindsym $mod+f workspace 4
+bindsym $mod+g workspace 5
 bindsym $mod+m focus right
+bindsym $mod+n focus left
+bindsym $mod+o exec dmenu_run
+bindsym $mod+q layout stacking
+bindsym $mod+r workspace 6
+bindsym $mod+s workspace 2
+bindsym $mod+u fullscreen
+bindsym $mod+v workspace 10
+bindsym $mod+w layout tabbed
+bindsym $mod+x workspace 8
+bindsym $mod+y split h
+bindsym $mod+z workspace 7
+
+bindsym $mod+Shift+P kill
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -25,24 +42,8 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
-bindsym $mod+y split h
-bindsym $mod+i split v
-bindsym $mod+u fullscreen
-bindsym $mod+q layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+a workspace 1
-bindsym $mod+s workspace 2
-bindsym $mod+d workspace 3
-bindsym $mod+f workspace 4
-bindsym $mod+g workspace 5
-bindsym $mod+r workspace 6
-bindsym $mod+z workspace 7
-bindsym $mod+x workspace 8
-bindsym $mod+c workspace 9
-bindsym $mod+v workspace 10
 bindsym $mod+Shift+exclam move workspace 1; workspace 1
 bindsym $mod+Shift+at move workspace 2; workspace 2
 bindsym $mod+Shift+numbersign move workspace 3; workspace 3
@@ -56,7 +57,6 @@ bindsym $mod+Shift+parenright move workspace 10;workspace 10
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
-bindsym $mod+b exec i3lock --color=000000
 
 focus_follows_mouse no
 workspace_layout tabbed
