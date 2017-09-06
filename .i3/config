@@ -20,8 +20,8 @@ bindsym $mod+comma workspace 6
 bindsym $mod+period workspace 7
 bindsym $mod+semicolon workspace 8
 
-bindsym $mod+u focus right
-bindsym $mod+i focus left
+bindsym $mod+u focus left
+bindsym $mod+i focus right
 bindsym $mod+o layout stacking
 bindsym $mod+p layout tabbed
 bindsym $mod+y fullscreen
