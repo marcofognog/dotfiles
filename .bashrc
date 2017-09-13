@@ -100,5 +100,3 @@ setup_ps1
 
 alias open='xdg-open'
 alias ber='bundle exec rspec'
-
-xmodmap ~/.Xmodmap
