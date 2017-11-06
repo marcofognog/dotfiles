@@ -27,6 +27,11 @@ bindsym $mod+p layout tabbed
 bindsym $mod+y fullscreen
 bindsym $mod+h exec i3lock --color=000000
 
+# Launch programs
+bindsym $mod+e exec emacs
+bindsym $mod+t exec gnome-terminal
+bindsym $mod+g exec google-chrome
+
 bindsym $mod+Up focus up
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
