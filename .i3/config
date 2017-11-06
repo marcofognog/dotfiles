@@ -48,14 +48,14 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-bindsym $mod+Shift+exclam move workspace 1; workspace 1
-bindsym $mod+Shift+at move workspace 2; workspace 2
-bindsym $mod+Shift+numbersign move workspace 3; workspace 3
-bindsym $mod+Shift+dollar move workspace 4; workspace 4
-bindsym $mod+Shift+percent move workspace 5; workspace 5
-bindsym $mod+Shift+dead_diaeresis move workspace 6; workspace 6
-bindsym $mod+Shift+ampersand move workspace 7;workspace 7
-bindsym $mod+Shift+asterisk move workspace 8; workspace 8
+bindsym $mod+Shift+J move workspace 1; workspace 1
+bindsym $mod+Shift+k move workspace 2; workspace 2
+bindsym $mod+Shift+L move workspace 3; workspace 3
+bindsym $mod+Shift+N move workspace 4; workspace 4
+bindsym $mod+Shift+M move workspace 5; workspace 5
+bindsym $mod+Shift+comma move workspace 6; workspace 6
+bindsym $mod+Shift+period move workspace 7;workspace 7
+bindsym $mod+Shift+semicolon move workspace 8; workspace 8
 
 focus_follows_mouse no
 workspace_layout tabbed
