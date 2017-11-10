@@ -10,8 +10,6 @@ sudo apt-get -y --allow-unauthenticated install sur5r-keyring
 sudo apt-get update
 sudo apt-get -y install i3 shutter google-chrome-stable
 
-./containerizable.sh
-
 # Finding files automated
 sudo cp file-edit.sh /usr/local/bin
 
