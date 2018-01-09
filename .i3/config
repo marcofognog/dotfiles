@@ -28,6 +28,7 @@ bindsym $mod+y fullscreen
 bindsym $mod+h exec i3lock --color=000000
 
 # Launch programs
+bindsym $mod+q exec bash -c 'cd ~/projetos && git clone $(xclip -o)' &
 bindsym $mod+e exec emacs
 bindsym $mod+t exec gnome-terminal
 bindsym $mod+g exec google-chrome
