@@ -58,9 +58,6 @@ source ~/.fzf.bash
 
 EDITOR=/usr/local/bin/vim
 
-# Load urxvt config
-xrdb ~/.Xresources
-
 set_term_title(){
   echo -en "\033]0;$1\a"
 }
