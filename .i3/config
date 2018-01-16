@@ -32,6 +32,8 @@ bindsym $mod+q exec bash -c 'cd ~/projetos && git clone $(xclip -o)' &
 bindsym $mod+e exec emacs
 bindsym $mod+t exec gnome-terminal
 bindsym $mod+g exec google-chrome
+bindsym $mod+a exec bash -c '~/.scripts/./monitor_externo.sh' &
+bindsym $mod+s exec bash -c '~/.scripts/./monitor_laptop.sh' &
 
 bindsym $mod+Up focus up
 bindsym $mod+Left focus left

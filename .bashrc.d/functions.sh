@@ -61,11 +61,3 @@ p(){
     cd ~/$current
   fi
 }
-
-monitor_externo() {
-  xrandr --output VGA1 --auto --output LVDS1 --off
-}
-
-monitor_laptop(){
-  xrandr --output VGA1 --off --output LVDS1 --auto
-}
