@@ -85,10 +85,6 @@ PS1+=$final
 PS1+="\[\e[0m\]"
 }
 
-nib(){
-  ssh _manogueira@nibbler0001.linux.locaweb.com.br
-}
-
 alias ls="ls -h --color=auto"
 
 setup_ps1
