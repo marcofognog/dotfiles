@@ -1,8 +1,6 @@
 # custom config file.
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-exec_always ~/./startup-hook.sh
-
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
