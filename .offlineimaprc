@@ -1,0 +1,28 @@
+[general]
+accounts = Gmail
+pythonfile = ~/retrieve.py
+
+[Account Gmail]
+localrepository = GmailLocal
+remoterepository = GmailRemote
+maxage = 2018-01-01
+
+postsynchook = ~/offlineimap-postsync.sh
+
+[Repository GmailLocal]
+type = Maildir
+localfolders = ~/mail
+
+
+[Repository GmailRemote]
+type = Gmail
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteusereval = get_2()
+remotepasseval = get_1()
+
+realdelete = no
+createfolders = false
+folderfilter = lambda foldername: foldername in ['INBOX']
+
+holdconnectionopen = true
+keepalive = 60
