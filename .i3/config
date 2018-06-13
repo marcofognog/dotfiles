@@ -27,6 +27,7 @@ bindsym $mod+h exec i3lock --color=000000
 
 # Launch programs
 bindsym $mod+q exec bash -c 'cd ~/projetos && git clone $(xclip -o)' &
+bindsym $mod+w exec bash -c '~/.scripts/./xmousable' &
 bindsym $mod+e exec emacs
 bindsym $mod+r exec bash -c 'sleep 1 && xdotool type Atendimento\ Academia\ da\ Gaita'
 bindsym $mod+t exec gnome-terminal
