@@ -11,17 +11,7 @@ sudo apt-get update
 sudo apt-get -y install i3 shutter google-chrome-stable jq vim
 sudo apt-get install build-essential texinfo libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libncurses-dev
 
-
 # FZF finder
-git clone --depth 1 https://github.com/junegunn/fzf.git /tmp/.fzf
-
-if [ -d ~/.fzf ]
-then
-  rm -rf ~/.fzf
-fi
-mv /tmp/.fzf ~/.fzf
-
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
-
-./copy-dots.sh
 
