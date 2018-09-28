@@ -34,6 +34,7 @@ bindsym $mod+t exec gnome-terminal
 bindsym $mod+g exec google-chrome
 bindsym $mod+a exec bash -c '~/.scripts/./monitor_externo.sh' &
 bindsym $mod+s exec bash -c '~/.scripts/./monitor_laptop.sh' &
+bindsym $mod+f exec bash -c '~/.scripts/./time_now.sh' &
 
 bindsym $mod+Up focus up
 bindsym $mod+Left focus left
