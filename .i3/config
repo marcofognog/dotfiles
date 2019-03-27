@@ -42,7 +42,7 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+A exec bash -c '~/.scripts/./monitor_externo.sh' &
 bindsym $mod+Shift+S exec bash -c '~/.scripts/./monitor_laptop.sh' &
-bindsym $mod+Shift+D exec bash -c '~/.scripts/./hdmi.sh' &
+bindsym $mod+Shift+D exec bash -c '~/.scripts/./company_monitor.sh' &
 bindsym $mod+Shift+C reload
 bindsym $mod+Shift+E exit
 bindsym $mod+Shift+P kill
