@@ -93,3 +93,14 @@ setup_ps1
 
 alias open='xdg-open'
 alias ber='bundle exec rspec'
+alias k="kubectl"
+export PATH=/usr/local/heroku/bin:/home/marco/.rvm/gems/ruby-2.7.0/bin:/home/marco/.rvm/gems/ruby-2.7.0@global/bin:/home/marco/.rvm/rubies/ruby-2.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/marco/.rvm/bin:/opt/android-sdk-linux/platform-tools/:/home/marco/.rvm/bin:/home/marco/.fzf/bin:/usr/local/go/bin:/usr/local/go/bin
+alias teshub="ssh teshub"
+
+kapp() {
+	kubectl exec -it $(kubectl get pods -n demodesk-app -lapp=demodesk-app --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | head -n 1) -- bash
+}
+
+krails() {
+        kubectl exec -n demodesk-app -it $(kubectl -n demodesk-app get pods -lapp=demodesk-app --field-selector=status.phase=Running --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | head -n 1) -- rails console
+}
