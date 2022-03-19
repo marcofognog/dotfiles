@@ -1,5 +1,6 @@
 #!/bin/sh
 
+SETUP_ENV=$(cat ~/.setup_env)
 if  [ -z $SETUP_ENV ]; then
     filepath=$(readlink -f "$0")
     echo "SETUP_ENV is not defined (exited from $filepath)"
