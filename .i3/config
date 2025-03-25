@@ -37,7 +37,8 @@ bindsym $mod+e exec emacs
 bindsym $mod+r exec bash -c 'sleep 1 && xdotool type Atendimento\ Academia\ da\ Gaita'
 bindsym $mod+t exec gnome-terminal
 bindsym $mod+g exec google-chrome
-bindsym $mod+s exec shutter -s # screenshot tool
+bindsym $mod+s exec flameshot gui --path ~/Pictures/ # screenshot tool
+
 
 bindsym $mod+Up focus up
 bindsym $mod+Left focus left
