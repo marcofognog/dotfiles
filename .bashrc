@@ -45,7 +45,9 @@ fi
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # set the right keyboard layout, since Ubuntu keeps forgeting it
-setxkbmap br
+# temporarly german
+# setxkbmap br
+setxkbmap de
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$PATH:/opt/android-sdk-linux/platform-tools/
@@ -104,3 +106,6 @@ kapp() {
 krails() {
         kubectl exec -n demodesk-app -it $(kubectl -n demodesk-app get pods -lapp=demodesk-app --field-selector=status.phase=Running --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}' | head -n 1) -- rails console
 }
+
+# Disable auto dimming (super nervig)
+gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
