@@ -6,7 +6,7 @@ set $mod Mod4
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 
-bindsym $mod+Return exec urxvt # terminal
+# bindsym $mod+Return {available}
 bindsym $mod+space exec dmenu_run
 
 bindsym $mod+j workspace 1
@@ -34,7 +34,7 @@ bindsym $mod+h exec i3lock --color=000000
 bindsym $mod+q exec bash -c 'cd ~/projetos && git clone $(xclip -o)' &
 bindsym $mod+w exec bash -c '~/.scripts/./xmousable -a' &
 bindsym $mod+e exec emacs
-bindsym $mod+r exec bash -c 'sleep 1 && xdotool type Atendimento\ Academia\ da\ Gaita'
+# bindsym $mod+r {available}
 bindsym $mod+t exec gnome-terminal
 bindsym $mod+g exec google-chrome
 bindsym $mod+s exec flameshot gui --path ~/Pictures/ # screenshot tool
