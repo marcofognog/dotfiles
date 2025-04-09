@@ -109,3 +109,6 @@ krails() {
 
 # Disable auto dimming (super nervig)
 gsettings set org.gnome.settings-daemon.plugins.power ambient-enabled false
+
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
