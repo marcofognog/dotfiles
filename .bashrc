@@ -46,8 +46,8 @@ fi
 
 # set the right keyboard layout, since Ubuntu keeps forgeting it
 # temporarly german
-# setxkbmap br
-setxkbmap de
+setxkbmap br
+#setxkbmap de
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$PATH:/opt/android-sdk-linux/platform-tools/
