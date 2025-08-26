@@ -16,9 +16,9 @@ bindsym $mod+x workspace 2
 bindsym $mod+l workspace 3
 bindsym $mod+c workspace 3
 bindsym $mod+n workspace 4
-bindsym $mod+v workspace 4
+bindsym $mod+v workspace 5
 bindsym $mod+m workspace 5
-bindsym $mod+b workspace 5
+bindsym $mod+b workspace 4
 bindsym $mod+comma workspace 6
 bindsym $mod+period workspace 7
 bindsym $mod+semicolon workspace 8
